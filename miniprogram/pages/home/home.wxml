@@ -1,0 +1,8 @@
+<view class="container">
+    <view>
+        {{date}} 天
+    </view>
+    <view wx-if="{{full_year}}">
+        {{full_year}} 周年
+    </view>
+</view>

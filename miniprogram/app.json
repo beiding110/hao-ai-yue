@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/home/home"
+    ],
+    "window": {
+        "backgroundColor": "#95E2FF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#95E2FF",
+        "navigationBarTitleText": "豪ai月",
+        "navigationBarTextStyle": "white"
+    }
+}
