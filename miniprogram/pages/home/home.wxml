@@ -1,17 +1,56 @@
 <view class="container">
     <view class="block-width home-top">
         <image class="block-width" src="../../images/home-top-bg.jpg" 
-        mode="scaleToFill" style="position:absolute; left:0; top:0; z-index:0;"></image>
+        mode="scaleToFill"></image>
 
         <view class="data-date data-fonts">
-          {{date}}
-          <text>天</text>
+            <image
+            src="../../images/icon/heart.png" 
+            mode="scaleToFill" 
+            class="icon-s"></image>
+            {{date}}
+            <text>天</text>
+
+            <view class="data-last">{{from_time}} - {{to_time}}</view>
         </view>
     </view>
-    <view class="card">
-        
-    </view>
-    <view class="card" wx-if="{{full_year}}">
-        {{full_year}} 周年
-    </view>
+
+    <card class="block-width" wx-if="{{full_year}}">
+        <view class="data-fonts data-full_year">
+            <image
+            src="../../images/icon/cake.png" 
+            mode="scaleToFill" 
+            class="icon-l"></image>
+            <view>
+                今天是 <text>{{full_year}}</text> 周年
+            </view>
+        </view>
+    </card>
+
+    <card class="block-width" wx-if="{{full_month}}">
+        <view class="data-fonts data-full_year">
+            <image
+            src="../../images/icon/flower.png" 
+            mode="scaleToFill" 
+            class="icon-l"></image>
+            <view>
+                今天是 <text>{{full_month}}</text> 周月
+            </view>
+        </view>
+    </card>
+
+    <card class="block-width">
+        <view class="data-fonts data-full_year date-to_next">
+            <image
+            src="../../images/icon/sandglass.png" 
+            mode="scaleToFill" 
+            class="icon-l"></image>
+            <view>
+                距下个周月还有 {{next_month}} 天
+            </view>
+            <view>
+                距下个周年还有 {{next_year}} 天
+            </view>
+        </view>
+    </card>
 </view>

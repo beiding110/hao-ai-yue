@@ -1,4 +1,6 @@
 //app.js
+import './js/app-mp'
+
 App({
   onLaunch: function () {
     

@@ -1,7 +1,10 @@
 /**app.wxss**/
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
+  font-size: 18px;
+  color: #232323;
 } 
+
+.block-width{width:100%;}
+
+.icon-s{width:.5em; height:.5em}
+.icon-l{width:2em; height:2em}
