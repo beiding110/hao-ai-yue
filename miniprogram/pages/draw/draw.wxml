@@ -1,0 +1,8 @@
+<!--miniprogram/pages/draw/draw.wxml-->
+<canvas
+    class="mainCanvas"
+    canvas-id="mainCanvas"
+    style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'
+    binderror="canvalError"
+    disable-scroll="true"
+></canvas>

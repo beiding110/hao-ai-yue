@@ -1,14 +1,15 @@
 {
-  "pages": [
-    "pages/home/home"
-  ],
-  "window": {
-    "backgroundColor": "#95E2FF",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#95E2FF",
-    "navigationBarTitleText": "豪ai月",
-    "navigationBarTextStyle": "white",
-    "navigationStyle": "custom"
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/home/home",
+        "pages/draw/draw"
+    ],
+    "window": {
+        "backgroundColor": "#95E2FF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#95E2FF",
+        "navigationBarTitleText": "豪ai月",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
+    },
+    "sitemapLocation": "sitemap.json"
 }
