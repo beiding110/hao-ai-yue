@@ -57,8 +57,22 @@ Page({
         var today = new Date(),
             next_month,
             next_year;
-        var the_next_year = new Date().setFullYear(today.getFullYear() + 1),
-            the_next_month = new Date().setMonth(today.getMonth() + 1);
+        var the_next_year,
+            the_next_month;
+
+		if(today.getMonth() < this.data.start_time.getMonth()) {
+			the_next_year = the_next_month = today;
+		} else if (today.getMonth() === this.data.start_time.getMonth()) {
+			if (today.getDate() <= this.data.start_time.getDate()) {
+				the_next_year = the_next_month = today;
+			} else {
+				the_next_year = new Date().setFullYear(today.getFullYear() + 1);
+				the_next_month = new Date().setMonth(today.getMonth() + 1);
+			}
+		} else {
+			the_next_year = new Date().setFullYear(today.getFullYear() + 1);
+			the_next_month = new Date().setMonth(today.getMonth() + 1);
+		};
 
         //设置下一年纪念日
         the_next_year = new Date(the_next_year);
