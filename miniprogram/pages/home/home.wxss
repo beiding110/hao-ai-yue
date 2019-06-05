@@ -1,5 +1,6 @@
 /* miniprogram/pages/home/home.wxss */
-.home-top{height:240px; position:relative; }
+.home-top{height:240px; position:relative; overflow:hidden;}
+.float-bg{width: 106%; height:106%;}
 
 .data-fonts{font-size:2em; font-weight:bold; text-align:center;}
 .data-fonts>text, .data-fonts>view{font-size:.5em;}

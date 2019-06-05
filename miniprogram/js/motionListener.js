@@ -4,6 +4,8 @@ function MotionListener(obj) {
 
 MotionListener.prototype = {
     init(obj) {
+        wx.stopDeviceMotionListening({});
+
         wx.startDeviceMotionListening({
             interval: 'game',
             success: function () {

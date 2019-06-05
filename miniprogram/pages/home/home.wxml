@@ -1,9 +1,9 @@
 <view class="container">
     <view class="block-width home-top">
-        <image class="block-width" src="../../images/home-top-bg.jpg" 
-        mode="scaleToFill"></image>
+        <image class="float-bg data-date" src="../../images/home-top-bg.jpg" 
+        mode="scaleToFill" style="transform:translate(calc(-50% + {{gamma}}px),calc(-50% + {{beta}}px));"></image>
 
-        <view class="data-date data-fonts" style="transform:translate(calc(-50% + {{gamma}}px),calc(-50% + {{beta}}px));">
+        <view class="data-date data-fonts">
             <image
             src="../../images/icon/heart.png" 
             mode="scaleToFill" 

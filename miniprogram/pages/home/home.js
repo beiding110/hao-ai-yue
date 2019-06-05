@@ -124,8 +124,8 @@ Page({
         new MotionListener({
             callback: (obj) => {
                 this.setData({
-                    beta: obj.beta / 10,
-                    gamma: obj.gamma / 10
+                    beta: obj.beta * 0.2,
+                    gamma: obj.gamma * 0.2
                 });
             }
         })
