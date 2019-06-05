@@ -6,7 +6,14 @@ Page({
      */
     data: {
         canvasWidth: '',
-        canvasHeight: ''
+        canvasHeight: '',
+
+        touchStart: 0,
+        touchEnd: 0,
+        drawLength: 0,
+        drawState: 0,
+
+        deck: [0, 0, 0, 0, 0]
     },
 
     /**
@@ -27,29 +34,63 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        const context = wx.createCanvasContext('mainCanvas')
-
-        context.setStrokeStyle('#00ff00')
-        context.setLineWidth(5)
-        context.rect(0, 0, 200, 200)
-        context.stroke()
         
-        context.setStrokeStyle('#ff0000')
-        context.setLineWidth(2)
-        context.moveTo(160, 100)
-        context.arc(100, 100, 60, 0, 2 * Math.PI, true)
-        context.moveTo(140, 100)
-        context.arc(100, 100, 40, 0, Math.PI, false)
-        context.moveTo(85, 80)
-        context.arc(80, 80, 5, 0, 2 * Math.PI, true)
-        context.moveTo(125, 80)
-        context.arc(120, 80, 5, 0, 2 * Math.PI, true)
-        context.stroke()
-
-        context.draw()
     },
 
-    canvalError: function(e) {
-        console.error(e.detail.errMsg);
+    drawMoveHandler: function(e) {
+        // console.log(e.touches[0].clientY, e);
+        var cy = e.touches[0].clientY,
+            delta = this.data.touchStart ? cy - this.data.touchStart : 0,
+            drawState = 0;
+
+        
+        // if(delta > 0 || delta < -10) {
+        //     //重置抽卡操作
+        //     console.warn('重置')
+        // };
+
+        //增加抽卡距离
+        var drawLength = this.data.drawLength;
+        drawLength = drawLength - delta;
+        if (drawLength > 100) {
+            drawState = 1
+        };
+
+        // console.log(drawLength)
+        this.setData({
+            touchStart: cy,
+            drawLength,
+            drawState
+        });
+    },
+    drawMoveEndHandler: function() {
+        if(this.data.drawState) {
+            console.info('draw!');
+        };
+        console.error('重置！！！！！！！！！！！');
+    },
+    shuffleHandler: function() {
+        var deckLength,
+            deck,
+            loopTime = 0,
+            index;
+
+        deck = this.data.deck;
+        deckLength = this.data.deck.length;
+        
+        var timer = setInterval(() => {
+            index = Math.round(Math.random() * deckLength);
+            deck[index] = -50;
+            this.setData({
+                deck
+            });
+            loopTime ++;
+
+            if (loopTime > deckLength) {
+                clearInterval(timer)
+            }
+            console.log(index)
+        }, 50);
+        
     }
 })

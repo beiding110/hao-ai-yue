@@ -12,10 +12,10 @@ Page({
         next_month: '-',//距下个月
         next_year: '-',//距下个年
 
-        start_time: '',//计算起始日期
+        start_time: '',//计算起始日期，Date对象
 
-        from_time: '',
-        to_time: ''
+        from_time: '',//计算起始日期，String格式
+        to_time: ''//当前日期，String格式
     },
 
     //计算纪念日
@@ -24,16 +24,23 @@ Page({
             month = false,
             year = false;
 
+        var today = new Date(),
+            today_s_date = today.getDate(), //今天的日期
+            today_s_month = today.getMonth(), //今天的月期
+            today_s_year = today.getFullYear(), //今天的年期
+            start_s_date = this.data.start_time.getDate(), //起始日期
+            start_s_month = this.data.start_time.getMonth(); //起始月份
+
         date = Math.ceil((new Date().getTime() - this.data.start_time.getTime()) / 1000 / 60 / 60 / 24);
 
-        if (new Date().getDate() === this.data.start_time.getDate()) {
-            if (new Date().getMonth() === this.data.start_time.getMonth()) {
+        if (today_s_date === start_s_date) {
+            if (today_s_month === start_s_month) {
                 //计算周年
-                year = new Date().getFullYear() - this.data.start_time.getFullYear();
+                year = today_s_year - this.data.start_time.getFullYear();
             };
 
             //计算周月
-            month = new Date().getMonth() + ((new Date().getFullYear() - this.data.start_time.getFullYear()) * 12) - this.data.start_time.getMonth();
+            month = today_s_month + ((today_s_year - this.data.start_time.getFullYear()) * 12) - start_s_month;
         };
 
         this.setData({
@@ -57,30 +64,37 @@ Page({
         var today = new Date(),
             next_month,
             next_year;
-        var the_next_year,
-            the_next_month;
 
-		if(today.getMonth() < this.data.start_time.getMonth()) {
-			the_next_year = the_next_month = today;
-		} else if (today.getMonth() === this.data.start_time.getMonth()) {
-			if (today.getDate() <= this.data.start_time.getDate()) {
-				the_next_year = the_next_month = today;
-			} else {
-				the_next_year = new Date().setFullYear(today.getFullYear() + 1);
-				the_next_month = new Date().setMonth(today.getMonth() + 1);
-			}
+        var the_next_year = new Date(), //下个周年日期，xxxx-03-06
+            the_next_month = new Date(); //下个周月日期，xxxx-xx-06
+
+        var today_s_date = today.getDate(), //今天的日期
+            today_s_month = today.getMonth(), //今天的月期
+            today_s_year = today.getFullYear(), //今天的年期
+            start_s_date = this.data.start_time.getDate(), //起始日期
+            start_s_month = this.data.start_time.getMonth(); //起始月份
+
+		if(today_s_month < start_s_month) {
+            if (today_s_date > start_s_date) {
+                the_next_month.setMonth(today_s_month + 1);
+            };
+		} else if (today_s_month === start_s_month) {
+			if (today_s_date > start_s_date) {
+                the_next_year.setFullYear(today_s_year + 1);
+                the_next_month.setMonth(today_s_month + 1);
+			};
 		} else {
-			the_next_year = new Date().setFullYear(today.getFullYear() + 1);
-			the_next_month = new Date().setMonth(today.getMonth() + 1);
+            the_next_year.setFullYear(today_s_year + 1);
+            if (today_s_date > start_s_date) {
+                the_next_month.setMonth(today_s_month + 1);
+            };
 		};
 
         //设置下一年纪念日
-        the_next_year = new Date(the_next_year);
-        the_next_year.setMonth(this.data.start_time.getMonth());
-        the_next_year.setDate(this.data.start_time.getDate());
+        the_next_year.setMonth(start_s_month);
+        the_next_year.setDate(start_s_date);
         //设置下一月纪念日
-        the_next_month = new Date(the_next_month);
-        the_next_month.setDate(this.data.start_time.getDate());
+        the_next_month.setDate(start_s_date);
         
         next_year = Math.floor((the_next_year - today.getTime()) / 1000 / 60 / 60 / 24);
         next_month = Math.floor((the_next_month - today.getTime()) / 1000 / 60 / 60 / 24);

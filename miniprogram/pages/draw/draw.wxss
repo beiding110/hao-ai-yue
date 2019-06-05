@@ -1,2 +1,8 @@
 /* miniprogram/pages/draw/draw.wxss */
-.mainCanvas{}
+.sense{position:absolute; left:0; top:0; right:0; bottom:0; overflow:hidden;}
+
+.card{width:236px; height:344px; background:red; position:absolute}
+
+.card-draw_container{position:absolute; left:50%; bottom:0; transform:translate(-50%, 10%); width:236px; height:344px;}
+.card-draw{transform:translate(-50%, -50%);}
+.card-draw image{width:236px; height:344px;}

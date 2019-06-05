@@ -1,7 +1,6 @@
 {
     "pages": [
-        "pages/home/home",
-        "pages/draw/draw"
+        "pages/home/home"
     ],
     "window": {
         "backgroundColor": "#95E2FF",
