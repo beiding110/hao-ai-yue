@@ -1,3 +1,5 @@
+import MotionListener from '../../js/motionListener'
+
 // miniprogram/pages/home/home.js
 Page({
 
@@ -15,7 +17,10 @@ Page({
         start_time: '',//计算起始日期，Date对象
 
         from_time: '',//计算起始日期，String格式
-        to_time: ''//当前日期，String格式
+        to_time: '',//当前日期，String格式
+
+        beta: 0, //用于banner文字浮动效果，y
+        gamma: 0, //用于banner文字浮动效果，x
     },
 
     //计算纪念日
@@ -115,6 +120,15 @@ Page({
             from_time: begin.Format('yyyy/MM/dd'),
             to_time: new Date().Format('yyyy/MM/dd'),
         });
+
+        new MotionListener({
+            callback: (obj) => {
+                this.setData({
+                    beta: obj.beta / 10,
+                    gamma: obj.gamma / 10
+                });
+            }
+        })
     },
 
     /**

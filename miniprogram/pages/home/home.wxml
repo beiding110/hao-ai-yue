@@ -3,7 +3,7 @@
         <image class="block-width" src="../../images/home-top-bg.jpg" 
         mode="scaleToFill"></image>
 
-        <view class="data-date data-fonts">
+        <view class="data-date data-fonts" style="transform:translate(calc(-50% + {{gamma}}px),calc(-50% + {{beta}}px));">
             <image
             src="../../images/icon/heart.png" 
             mode="scaleToFill" 
