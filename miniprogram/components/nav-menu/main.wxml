@@ -1,0 +1,16 @@
+<card class="block-width">
+    <view class="tools-nav">
+        <view 
+        class="tools-nav_block" 
+        wx:for="{{navArr}}" 
+        wx:key="{{item.text}}" 
+        bindtap="tabHandler" 
+        data-data="{{item}}">
+            <image
+            src="{{item.img}}" 
+            mode="scaleToFill" 
+            class="nav-item-icon"></image>
+            <view class="nav-item-text">{{item.text}}</view>
+        </view>
+    </view>
+</card>

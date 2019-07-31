@@ -1,0 +1,14 @@
+<view class="memorandum">
+    <card class="block-width mmr-item" wx:for="{{objData}}" wx:key="{{item.title}}">
+        <view class="mmr-item_title">
+            {{item.title}}
+            ({{item.children.length}})
+        </view>
+        <checkbox-group class="mmr-item_body" bindchange="checkboxChange">
+            <view wx:for="{{item.children}}" class="checkgroup-item">
+                {{item.label}}
+                <checkbox class="checkgroup-item_box" value="{{item.label}}" checked="{{item.checked}}"/>
+            </view>
+        </checkbox-group>
+    </card>
+</view>

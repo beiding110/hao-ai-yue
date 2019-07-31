@@ -1,6 +1,7 @@
 {
     "pages": [
-        "pages/home/home"
+        "pages/home/home",
+        "pages/memorandum/main"
     ],
     "window": {
         "backgroundColor": "#95E2FF",

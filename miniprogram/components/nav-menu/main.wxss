@@ -1,0 +1,5 @@
+.tools-nav{display:flex; font-size:2em;}
+.tools-nav_block{flex:1; text-align:center;}
+
+.nav-item-icon{width:2em; height:2em;}
+.nav-item-text{font-size:.4em; font-weight:bold; color:#666;}

@@ -1,0 +1,7 @@
+.mmr-item_title{display:inline-block; border-radius:0 .7em .7em 0; padding:.2em 1em; color:#276B8C; font-weight:bold; font-size:1.2em;}
+.memorandum .mmr-item:nth-child(2n + 1) .mmr-item_title{background:#9DD8DC;}
+.memorandum .mmr-item:nth-child(2n) .mmr-item_title{background:#8DCCB9;}
+.mmr-item_body .checkgroup-item:nth-child(2n + 1){background:#F1F5F6;}
+
+.checkgroup-item{padding:.5em 1em; overflow:hidden;}
+.checkgroup-item_box{float:right;}
