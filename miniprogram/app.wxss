@@ -8,3 +8,14 @@
 
 .icon-s{width:.5em; height:.5em}
 .icon-l{width:2em; height:2em}
+
+.data-fonts{font-size:2em; font-weight:bold; text-align:center;}
+.data-fonts>text, .data-fonts>view{font-size:.5em;}
+
+.data-date{color:white; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1;}
+.data-date .data-last{font-size:.3em;}
+
+.data-full_year{}
+.data-full_year>view>text{display:inline-block; color:#E6A23C;}
+
+.data-full_year.date-to_next view{font-size:.4em;}

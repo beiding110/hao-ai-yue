@@ -15,6 +15,8 @@
         </view>
     </view>
 
+	<marry target="2020-10-18"></marry>
+
     <card class="block-width" wx-if="{{full_year}}">
         <view class="data-fonts data-full_year">
             <image

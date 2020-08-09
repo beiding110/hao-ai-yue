@@ -1,0 +1,11 @@
+<card class="block-width">
+	<view class="data-fonts data-full_year">
+		<image
+		src="../../images/icon/marriage.png" 
+		mode="scaleToFill" 
+		class="icon-l"></image>
+		<view>
+			 {{discription}} <text>{{date}}</text> 天
+		</view>
+	</view>
+</card>

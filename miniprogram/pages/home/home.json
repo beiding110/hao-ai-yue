@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "card": "/components/card/card",
-        "nav": "/components/nav-menu/main"
+        "nav": "/components/nav-menu/main",
+		"marry": "/components/marry/index"
     }
 }
