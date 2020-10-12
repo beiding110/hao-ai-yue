@@ -1,14 +1,3 @@
 /* miniprogram/pages/home/home.wxss */
 .home-top{height:240px; position:relative; overflow:hidden;}
 .float-bg{width: 106%; height:106%;}
-
-.data-fonts{font-size:2em; font-weight:bold; text-align:center;}
-.data-fonts>text, .data-fonts>view{font-size:.5em;}
-
-.data-date{color:white; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1;}
-.data-date .data-last{font-size:.3em;}
-
-.data-full_year{}
-.data-full_year>view>text{display:inline-block; color:#E6A23C;}
-
-.data-full_year.date-to_next view{font-size:.4em;}
