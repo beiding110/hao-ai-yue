@@ -1,0 +1,10 @@
+.p{display:block; padding:.3em 2em; position:relative;}
+.p:after{content:''; position:absolute; left:2em; right:2em; bottom:0; height:1px; background:#efefef;}
+
+.title{display:inline-block; padding:.2em 1em .2em 2em; margin-bottom:1em; color:white; border-top-right-radius:1em; border-bottom-right-radius:1em; font-weight:bold;}
+.title.yy{background:#E84382;}
+.title.hh{background:#83C6EF;}
+
+.oath{}
+.paper{}
+.banner{width:70%; margin:-2em auto -6em; display:block;}

@@ -1,0 +1,26 @@
+<view class="oath">
+  <image 
+    class="banner"
+    src="../../images/silk.png" 
+    mode="aspectFit"
+  ></image>
+
+  <card>
+    <view class="paper">
+      <view class="title yy">月月：</view>
+      <view class="p">余生很美，因为余生有你</view>
+    </view>
+  </card>
+  <card>
+    <view class="paper">
+      <view class="title hh">豪豪：</view>
+      <view class="p">首先要夸一句我媳妇：</view>
+      <view class="p">梦月，你今天真美</view>
+      <view class="p">我们相识九年，相恋九年</view>
+      <view class="p">九年很长，长到有3515个日日夜夜；九年很短，短的就像我们每天都不会忘记互道的晚安</view>
+      <view class="p">我很开心与你共度这个九年，我也很愿意与你携手我们人生的每个九年</view>
+      <view class="p">本来我准备了一些精致的话想和你说，但是现在我改主意了，我现在只想对你说：</view>
+      <view class="p">梦月，我爱你</view>
+    </view>
+  </card>
+</view>
