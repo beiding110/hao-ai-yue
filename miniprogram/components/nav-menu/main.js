@@ -13,7 +13,8 @@ Component({
     data: {
         navArr: [
             { img: '../../images/icon/memorandum.png', text: '出差备忘录', url:'/pages/memorandum/main' },
-            { img: '../../images/icon/oath.png', text: '我们的誓言', url:'/pages/oath/oath' }
+            { img: '../../images/icon/oath.png', text: '我们的誓言', url:'/pages/oath/oath' },
+            { img: '../../images/icon/invitation.png', text: '请帖', url:'/pages/invitation/invitation' },
         ]
     },
 

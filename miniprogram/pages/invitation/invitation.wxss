@@ -1,0 +1,57 @@
+div, img {
+    display: block;
+}
+
+.css3__scene--con {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.css3__scene--stage {
+    transform-style: preserve-3d;
+    perspective: 398.135px;
+    -moz-perspective: 398.135px;
+    -webkit-perspective: 398.135px;
+    width: 100%;
+    height: 100%;
+}
+
+.css3__scene--box {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0px, 0px, 398.135px) rotateZ(0deg) rotateX(0deg) rotateY(0deg) translate3d(50%, 50%, 0px);
+}
+
+.css3__scene--faces {
+    width: 1026px;
+    height: 1026px;
+}
+
+.css3__scene--faces:nth-child(1){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateY(-90deg) translateZ(-512px); background-color:red;
+}
+.css3__scene--faces:nth-child(2){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateY(90deg) translateZ(-512px); background-color:orange;
+}
+.css3__scene--faces:nth-child(3){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateX(-90deg) translateZ(-512px); background-color:yellow;
+}
+.css3__scene--faces:nth-child(4){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateX(90deg) translateZ(-512px); background-color:green;
+}
+.css3__scene--faces:nth-child(5){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateY(0deg) translateZ(-512px); background-color:blue;
+}
+.css3__scene--faces:nth-child(6){
+    position:absolute;transform:translate3d(-50%,-50%,0) rotateY(180deg) translateZ(-512px); background-color:purple;
+}

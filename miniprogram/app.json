@@ -1,16 +1,17 @@
 {
-  "pages": [
-    "pages/home/home",
-    "pages/memorandum/main",
-    "pages/oath/oath"
-  ],
-  "window": {
-    "backgroundColor": "#95E2FF",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#95E2FF",
-    "navigationBarTitleText": "豪ai月",
-    "navigationBarTextStyle": "white",
-    "navigationStyle": "custom"
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/home/home",
+        "pages/memorandum/main",
+        "pages/oath/oath",
+        "pages/invitation/invitation"
+    ],
+    "window": {
+        "backgroundColor": "#95E2FF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#95E2FF",
+        "navigationBarTitleText": "豪ai月",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
+    },
+    "sitemapLocation": "sitemap.json"
 }

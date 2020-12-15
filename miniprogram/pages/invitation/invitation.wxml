@@ -1,0 +1,13 @@
+<div class="css3__scene--con">
+    <div class="css3__scene--stage">
+        <div class="css3__scene--box"
+            style="transform: translate3d(0px, 0px, 398.135px) rotateZ(0deg) rotateX({{R_X}}deg) rotateY({{R_Y}}deg) translate3d(50%, 50%, 0px);">
+            <image class="css3__scene--faces" src="{{scene[0]}}" />
+            <image class="css3__scene--faces" src="{{scene[1]}}" />
+            <image class="css3__scene--faces" src="{{scene[2]}}" />
+            <image class="css3__scene--faces" src="{{scene[3]}}" />
+            <image class="css3__scene--faces" src="{{scene[4]}}" />
+            <image class="css3__scene--faces" src="{{scene[5]}}" />
+        </div>
+    </div>
+</div>
