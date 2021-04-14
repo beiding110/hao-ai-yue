@@ -11,14 +11,75 @@ Page({
         R_X: 0,
         R_Y: 0,
 
-        scene: [
-            '../../images/invite/the-bridge/posx.jpg',
-            '../../images/invite/the-bridge/negx.jpg',
-            '../../images/invite/the-bridge/posy.jpg',
-            '../../images/invite/the-bridge/negy.jpg',
-            '../../images/invite/the-bridge/posz.jpg',
-            '../../images/invite/the-bridge/negz.jpg',
-        ]
+        scene: [],
+        
+        active: 0,
+        navShow: true,
+    },
+
+    tapHandler(event) {
+        var index;
+
+        if(event) {
+            index = Number(event.target.dataset.index);
+        } else {
+            index = 0;
+        };
+
+        this.loadImg(index);
+
+        this.setData({
+            active: index
+        });
+    },
+
+    loadImg(index = 0) {
+
+        const URL = 'http://62.234.50.83:12100/images/scene-';
+        const NAME_THEME = [
+            {
+                name: 'gray',
+                arr: ['posz', 'negz', 'bg', 'bg', 'posx', 'negx'],
+            },
+            {
+                name: 'orange',
+                arr: ['posz', 'negz', 'posy', 'negy', 'posx', 'negx'],
+            },
+            {
+                name: 'yellow',
+                arr: ['posx', 'negx', 'posy', 'posy', 'posz', 'negz'],
+            },
+            {
+                name: 'cool',
+                arr: ['posz', 'negz', 'posy', 'posy', 'posx', 'negx'],
+            },
+        ];
+
+        // var index = new Date().getTime() % 3;
+        var usingTheme = NAME_THEME[index];
+
+        var nameArr = usingTheme.arr.reduce((arr, item) => {
+            arr.push(`${URL}${usingTheme.name}/${item}.jpg`);
+            return arr;
+        }, []);
+
+        this.setData({
+            scene: nameArr
+        });
+    },
+
+    imgErrorHandler() {
+        this.setData({
+            scene: [
+                '../../images/invite/the-bridge/posx.jpg',
+                '../../images/invite/the-bridge/negx.jpg',
+                '../../images/invite/the-bridge/posy.jpg',
+                '../../images/invite/the-bridge/negy.jpg',
+                '../../images/invite/the-bridge/posz.jpg',
+                '../../images/invite/the-bridge/negz.jpg',
+            ],
+            navShow: false
+        });
     },
 
     /**
@@ -33,7 +94,9 @@ Page({
                     R_Y: event.R_Y,
                 });
             }
-        })
+        });
+
+        this.tapHandler()
     },
 
     /**

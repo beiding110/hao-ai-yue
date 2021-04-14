@@ -12,7 +12,7 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "useMultiFrameRuntime": false,
+        "useMultiFrameRuntime": true,
         "useApiHook": true,
         "babelSetting": {
             "ignore": [],
@@ -22,32 +22,32 @@
         "useIsolateContext": true,
         "useCompilerModule": true,
         "userConfirmedUseCompilerModuleSwitch": false,
+        "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
-        "packNpmRelationList": []
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "bundle": false,
+        "useApiHostProcess": false
     },
     "appid": "wx68a1b9eb58c5357e",
     "projectname": "hao-ai-yue",
-    "libVersion": "2.14.1",
+    "libVersion": "2.16.0",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "condition": {
         "search": {
-            "current": -1,
             "list": []
         },
         "conversation": {
-            "current": -1,
             "list": []
         },
         "plugin": {
-            "current": -1,
             "list": []
         },
         "game": {
             "list": []
         },
         "miniprogram": {
-            "current": 0,
             "list": [
                 {
                     "id": -1,

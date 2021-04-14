@@ -2,12 +2,19 @@
     <div class="css3__scene--stage">
         <div class="css3__scene--box"
             style="transform: translate3d(0px, 0px, 398.135px) rotateZ(0deg) rotateX({{R_X}}deg) rotateY({{R_Y}}deg) translate3d(50%, 50%, 0px);">
-            <image class="css3__scene--faces" src="{{scene[0]}}" />
-            <image class="css3__scene--faces" src="{{scene[1]}}" />
-            <image class="css3__scene--faces" src="{{scene[2]}}" />
-            <image class="css3__scene--faces" src="{{scene[3]}}" />
-            <image class="css3__scene--faces" src="{{scene[4]}}" />
-            <image class="css3__scene--faces" src="{{scene[5]}}" />
+            <image class="css3__scene--faces" src="{{scene[0]}}" binderror="imgErrorHandler"/>
+            <image class="css3__scene--faces" src="{{scene[1]}}" binderror="imgErrorHandler"/>
+            <image class="css3__scene--faces" src="{{scene[2]}}" binderror="imgErrorHandler"/>
+            <image class="css3__scene--faces" src="{{scene[3]}}" binderror="imgErrorHandler"/>
+            <image class="css3__scene--faces" src="{{scene[4]}}" binderror="imgErrorHandler"/>
+            <image class="css3__scene--faces" src="{{scene[5]}}" binderror="imgErrorHandler"/>
         </div>
     </div>
+</div>
+
+<div class="btn-con" wx:if="{{navShow}}">
+    <div class="btn-item {{active === 0 ? 'active' : ''}}" data-index="0" bindtap="tapHandler"></div>
+    <div class="btn-item {{active === 1 ? 'active' : ''}}" data-index="1" bindtap="tapHandler"></div>
+    <div class="btn-item {{active === 2 ? 'active' : ''}}" data-index="2" bindtap="tapHandler"></div>
+    <div class="btn-item {{active === 3 ? 'active' : ''}}" data-index="3" bindtap="tapHandler"></div>
 </div>
