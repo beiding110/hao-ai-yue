@@ -3,7 +3,8 @@
         "pages/home/home",
         "pages/memorandum/main",
         "pages/oath/oath",
-        "pages/invitation/invitation"
+        "pages/invitation/invitation",
+        "pages/painting/painting"
     ],
     "window": {
         "backgroundColor": "#95E2FF",

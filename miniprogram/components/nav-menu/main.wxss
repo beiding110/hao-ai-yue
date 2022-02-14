@@ -1,5 +1,5 @@
-.tools-nav{display:flex; font-size:2em;}
-.tools-nav_block{flex:1; text-align:center;}
+.tools-nav{display:flex; font-size:2em; flex-wrap:wrap; margin: -.5em 0;}
+.tools-nav_block{flex:0 0 33.33%; text-align:center; margin: .5em 0;}
 
 .nav-item-icon{width:2em; height:2em;}
 .nav-item-text{font-size:.4em; font-weight:bold; color:#666;}

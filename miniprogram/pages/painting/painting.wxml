@@ -1,0 +1,14 @@
+<view class="painting-con">
+    <card
+    wx:for="{{imgArr}}" 
+    wx:key="{{item.text}}" 
+    >
+        <image 
+            class="painting-item"
+            src="{{item.src}}"
+            mode="widthFix"
+            data-data="{{item}}"
+            bindtap="previewHandler" 
+        ></image>
+    </card>
+</view>
