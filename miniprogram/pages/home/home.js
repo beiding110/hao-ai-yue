@@ -29,7 +29,7 @@ Page({
             month = false,
             year = false;
 
-        var today = new Date(),
+        var today = new Date('2024/05/22'),
             today_s_date = today.getDate(), //今天的日期
             today_s_month = today.getMonth(), //今天的月期
             today_s_year = today.getFullYear(), //今天的年期
@@ -66,7 +66,7 @@ Page({
     },
     //计算倒计时
     calcNext: function() {
-        var today = new Date(),
+        var today = new Date('2024/05/22'),
             next_month,
             next_year;
 
