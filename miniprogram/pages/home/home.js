@@ -1,5 +1,8 @@
 import MotionListener from '../../js/motionListener'
 
+const START_TIME = '2011/03/06',
+    END_TIME = '2024/05/22';
+
 // miniprogram/pages/home/home.js
 Page({
 
@@ -29,14 +32,14 @@ Page({
             month = false,
             year = false;
 
-        var today = new Date('2024/05/22'),
+        var today = new Date(END_TIME),
             today_s_date = today.getDate(), //今天的日期
             today_s_month = today.getMonth(), //今天的月期
             today_s_year = today.getFullYear(), //今天的年期
             start_s_date = this.data.start_time.getDate(), //起始日期
             start_s_month = this.data.start_time.getMonth(); //起始月份
 
-        date = Math.ceil((new Date().getTime() - this.data.start_time.getTime()) / 1000 / 60 / 60 / 24);
+        date = Math.ceil((new Date(END_TIME).getTime() - this.data.start_time.getTime()) / 1000 / 60 / 60 / 24); // 持续天数
 
         if (today_s_date === start_s_date) {
             if (today_s_month === start_s_month) {
@@ -66,7 +69,7 @@ Page({
     },
     //计算倒计时
     calcNext: function() {
-        var today = new Date('2024/05/22'),
+        var today = new Date(END_TIME),
             next_month,
             next_year;
 
@@ -114,11 +117,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var begin = new Date('2011/03/06');
+        var begin = new Date(START_TIME);
         this.setData({
             start_time: begin,
             from_time: begin.Format('yyyy/MM/dd'),
-            to_time: new Date().Format('yyyy/MM/dd'),
+            to_time: new Date(END_TIME).Format('yyyy/MM/dd'),
         });
 
         new MotionListener({
